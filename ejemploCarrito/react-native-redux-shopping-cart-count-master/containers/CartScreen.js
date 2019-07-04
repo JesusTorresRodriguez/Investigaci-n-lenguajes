@@ -15,7 +15,7 @@ class CartScreen extends Component {
                 <Products 
                     onPress={this.props.removeItem}
                 products = {this.props.cartItems} />
-                : <Text>No hay Artículos en tu carrito</Text>
+                : <Text>No hay Artículos en tu Lista de Compras</Text>
             }
             </View>
         );

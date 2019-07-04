@@ -2,44 +2,56 @@ import React, { Component } from "react";
 import {
     View,
     Text,
+    Alert,
     StyleSheet,
     Button,
-    Image
+    Image,
+    TouchableOpacity
 } from "react-native";
 
 class HomeScreen extends Component {
+
     render() {
         return (
             <View style={styles.container}>
 
-                <Image
-                    source={{
-                        uri: 'https://previews.123rf.com/images/fad82/fad821403/fad82140300166/28252603-iconos-del-web-de-la-tecnolog%C3%ADa-inform%C3%A1tica-y-aparatos-electr%C3%B3nicos.jpg',
-                        method: 'POST',
-                        headers: {
-                            Pragma: 'no-cache',
-                        },
-                        body: 'Your Body goes here',
-                    }}
-                    style={{ width: 100, height: 100 }}
-                />
+                <TouchableOpacity onPress={()=>this.props.navigation.navigate('Electronics')}>
+                    <Image
+                        style={{
+                            height: 150, width:150
+                        }}
+                        source={{
+                            uri:  'https://www.aletem.com.br/image/cache/catalog/Marcas/ELETRONICOS-600x315.png'
+                        }}
+                    />
+                </TouchableOpacity>
 
                 <Button title="Electrónicos"
-                    onPress={() => this.props.navigation.navigate('Electronics')} />
+                    onPress={() => this.props.navigation.navigate('Electronics')} 
+                    color='#000000'
+                    />
 
-                <Image
-                    source={{
-                        uri: 'https://www.concienciaeco.com/wp-content/uploads/2013/08/libros.jpg',
-                        method: 'POST',
-                        headers: {
-                            Pragma: 'no-cache',
-                        },
-                        body: 'Your Body goes here',
-                    }}
-                    style={{ width: 100, height: 100 }}
+                <Text></Text>    
+                <Text></Text>
+
+                <TouchableOpacity onPress={()=>this.props.navigation.navigate('Books')}>
+                    <Image
+                        style={{
+                            height: 150, width:150
+                        }}
+                        source={{
+                            uri: 'https://static.websguru.com.ar/var/m_e/e4/e43/50477/751999-book1.png'
+                        }}
+                    />
+                </TouchableOpacity>
+
+                <Button title="Libros" 
+                    onPress={() => this.props.navigation.navigate('Books')} 
+                color='#000000'
                 />
-                <Button title="Libros"
-                    onPress={() => this.props.navigation.navigate('Books')} />
+
+                
+
             </View>
         );
     }
@@ -51,5 +63,11 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+    },
+    title:{
+        color:'#fff',
+    },
+    Button:{
+        color:'#000000'
     },
 });
