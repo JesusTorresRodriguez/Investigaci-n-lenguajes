@@ -3,7 +3,7 @@ import {
     View,
     Text,
     StyleSheet,
-    Image
+    ScrollView
 } from "react-native";
 
 import {electronics} from '../Data';
@@ -17,10 +17,12 @@ class ElectronicsScreen extends Component{
     }
     render(){
         return (
+            <ScrollView>  
             <View style={styles.container}>
                 <Products products = {electronics} onPress=
                 {this.props.addItemToCart} />
             </View>
+            </ScrollView>   
         );
     }
 }
@@ -36,7 +38,5 @@ export default connect(null, mapDispatchToProps)(ElectronicsScreen);
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
+    }
 });

@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet,
+    ScrollView
 } from "react-native";
 
 import {books} from '../Data'
@@ -12,10 +13,12 @@ import {connect} from 'react-redux'
 class BookScreen extends Component{
     render(){
         return (
+            <ScrollView> 
             <View style={styles.container}>
                 <Products products={books} onPress=
                 {this.props.addItemToCart} />
             </View>
+            </ScrollView> 
         );
     }
 }
