@@ -13,7 +13,7 @@ class Products extends Component {
         console.log(products)
         return products.map((item, index) => {
             return (
-                <View key={index} style={StyleSheet.container}>
+                <View key={index} style={{padding: 10}}>
 
                     <Image
                         source={{
@@ -24,10 +24,10 @@ class Products extends Component {
                             },
                             body: 'Your Body goes here',
                         }}
-                        style={{ width: 100, height: 100 }}
+                        style={{ width: 200, height: 250 }}
                     />
 
-                    <Text>{item.name + " - " + item.price}</Text>
+                    <Text style={styles.fontLetra}>{ item.name + " -> $" + item.price}</Text>
 
                     <Button onPress={() => this.props.onPress(item)}
                         title={"Seleccionar"} />
@@ -50,6 +50,13 @@ export default Products;
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    fontLetra: {
+        textAlign: 'center',
+        fontSize: 30
     }
+
 });
