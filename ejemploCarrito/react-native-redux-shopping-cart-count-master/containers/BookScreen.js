@@ -11,6 +11,10 @@ import Products from '../components/Products'
 import {connect} from 'react-redux'
 
 class BookScreen extends Component{
+    static navigationOptions = {
+        headerTitle: 'Libros'
+    }
+
     render(){
         return (
             <ScrollView> 

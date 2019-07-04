@@ -15,7 +15,7 @@ import ShoppingCartIcon from './containers/ShoppingCartIcon'
 class ShoopingCart extends Component{
     render(){
         return(
-            <AppStackNavigator />
+            <AppStackNavigator/>
         );
     }
 }
@@ -26,9 +26,13 @@ const AppStackNavigator = createStackNavigator({
     Electronics: ElectronicsScreen,
     Books: BookScreen,
     Cart: CartScreen
-},{
+    },
+    {
     navigationOptions:{
-        headerTitle: 'Shopping App',
+        headerTitle: 'Oxford Online',
+        headerStyle: {
+            backgroundColor: '#BAC2BC'
+          },
         headerRight: (
             <ShoppingCartIcon/>
         )

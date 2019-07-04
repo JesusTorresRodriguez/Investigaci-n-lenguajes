@@ -15,14 +15,14 @@ const ShoppingCartIcon = (props) => (
     <View style={[{padding: 5}, Platform.OS == 'android' ? styles.iconContainer : null]}>
         <View style={{
             position: 'absolute', height: 30, width:30,
-            borderRadius: 15, backgroundColor: 'rgba(95,197,123,0.8)',
-            right: 15, bottom: 15, alignItems: 'center',
+            borderRadius: 50, backgroundColor: 'rgba(95,197,123,0.8)',
+            right: 30, bottom: 25, alignItems: 'center',
             justifyContent: 'center', zIndex: 2000
         }}>
             <Text style={{color:'white', fontWeight: 'bold'}}>
             {props.cartItems.length}</Text>
         </View>
-        <Icon onPress={() => props.navigation.navigate('Cart')} name="ios-cart" size={30} />
+        <Icon onPress={() => props.navigation.navigate('Cart')} name="ios-cart" size={40} />
     </View>
 )
 

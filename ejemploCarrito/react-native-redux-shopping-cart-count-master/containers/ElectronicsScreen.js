@@ -13,7 +13,7 @@ import {connect} from 'react-redux';
 class ElectronicsScreen extends Component{
 
     static navigationOptions = {
-        headerTitle: 'Electronics'
+        headerTitle: 'Electrónicos'
     }
     render(){
         return (
@@ -38,5 +38,7 @@ export default connect(null, mapDispatchToProps)(ElectronicsScreen);
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 });
