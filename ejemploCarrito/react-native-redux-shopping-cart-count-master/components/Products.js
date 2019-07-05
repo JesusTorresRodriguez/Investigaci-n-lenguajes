@@ -4,10 +4,20 @@ import {
     Text,
     StyleSheet,
     Button,
-    Image
+    Alert,
+    Image,
+    TouchableOpacity
 } from "react-native";
 
 class Products extends Component {
+
+    messageImage = (item) => {
+        
+            return (
+               Alert.alert( item.name + ", Descripción: " + item.descripcion)
+            )
+        
+    }
 
     renderProducts = (products) => {
         console.log(products)
@@ -15,17 +25,16 @@ class Products extends Component {
             return (
                 <View key={index} style={{padding: 10}}>
 
+                <TouchableOpacity onPress={()=>this.messageImage(item)}>
                     <Image
-                        source={{
-                            uri: item.image,
-                            method: 'POST',
-                            headers: {
-                                Pragma: 'no-cache',
-                            },
-                            body: 'Your Body goes here',
+                        style={{
+                            height: 150, width:150
                         }}
-                        style={{ width: 200, height: 250 }}
+                        source={{
+                            uri: item.image
+                        }}
                     />
+                </TouchableOpacity>
 
                     <Text style={styles.fontLetra}>{ item.name + " -> $" + item.price}</Text>
 
@@ -56,7 +65,7 @@ const styles = StyleSheet.create({
     },
     fontLetra: {
         textAlign: 'center',
-        fontSize: 30
+        fontSize: 20
     }
 
 });

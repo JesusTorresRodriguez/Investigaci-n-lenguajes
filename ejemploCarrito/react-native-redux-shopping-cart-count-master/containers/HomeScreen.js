@@ -11,6 +11,8 @@ import {
 
 class HomeScreen extends Component {
 
+    
+
     render() {
         return (
             <View style={styles.container}>
@@ -26,11 +28,16 @@ class HomeScreen extends Component {
                     />
                 </TouchableOpacity>
 
+                <Text></Text>    
+                <Text></Text>
+                
                 <Button title="Electrónicos"
                     onPress={() => this.props.navigation.navigate('Electronics')} 
                     color='#000000'
                     />
 
+                <Text></Text>    
+                <Text></Text>
                 <Text></Text>    
                 <Text></Text>
 
@@ -44,6 +51,9 @@ class HomeScreen extends Component {
                         }}
                     />
                 </TouchableOpacity>
+
+                <Text></Text>    
+                <Text></Text>
 
                 <Button title="Libros" 
                     onPress={() => this.props.navigation.navigate('Books')} 

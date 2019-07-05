@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import {
     View,
     Text,
-    StyleSheet
+    StyleSheet, 
+    ScrollView
 } from "react-native";
 import Products from '../components/Products'
 import {connect} from 'react-redux'
@@ -10,6 +11,7 @@ import {connect} from 'react-redux'
 class CartScreen extends Component {
     render(){
         return(
+            <ScrollView>  
             <View style={styles.container}>
             {this.props.cartItems.length>0?
                 <Products 
@@ -18,6 +20,7 @@ class CartScreen extends Component {
                 : <Text>No hay Artículos en tu Lista de Compras</Text>
             }
             </View>
+            </ScrollView>  
         );
     }
 }
